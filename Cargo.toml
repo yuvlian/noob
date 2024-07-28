@@ -1,0 +1,19 @@
+[package]
+name = "starrailrust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+constcat = "0.5.0"
+reqwest = "0.12.5"
+serde = { version = "1.0.204", features = ["derive"] }
+serde_json = "1.0.120"
+tokio = { version = "1.38.1", features = ["rt-multi-thread", "macros"] }
+
+[lib]
+name = "starrailres"
+path = "src/utils/mod.rs"
+
+[[bin]]
+name = "starrailrust"
+path = "src/main.rs"
